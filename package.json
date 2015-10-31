@@ -1,0 +1,32 @@
+{
+  "name": "react-webrtc-chat",
+  "version": "0.0.0",
+  "description": "React WebRTC chat with Socket.io, BootStrap and PeerJS",
+  "main": "app.js",
+  "scripts": {
+    "build-js": "babel src/components --watch --out-file src/Components.js ",
+    "start-app": "node app.js",
+    "start": "npm run start-app"
+  },
+  "keywords": [
+    "webrtc",
+    "react"
+  ],
+  "babel": {
+    "plugins": [
+      "syntax-jsx"
+    ]
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "~4.13.3",
+    "peer": "~0.2.8",
+    "react": "~0.12.2",
+    "socket.io": "~1.0.6"
+  },
+  "devDependencies": {
+    "babelify": "^7.0.2",
+    "browserify": "^12.0.1",
+    "reactify": "^1.1.1"
+  }
+}

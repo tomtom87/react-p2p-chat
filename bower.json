@@ -1,0 +1,21 @@
+{
+  "name": "react-webrtc-chat",
+  "main": "app.js",
+  "version": "0.0.0",
+  "license": "GNU",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "~0.12.2",
+    "jquery": "~2.1.4",
+    "eventEmitter": "~4.2.7",
+    "peerjs": "~0.3.14",
+    "bootstrap": "~3.3.5"
+  }
+}
