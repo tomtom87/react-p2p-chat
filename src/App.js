@@ -3,8 +3,30 @@
 
 $(function () {
   'use strict';
-  debugger;
 
+  // Check for session value
+  $(document).ready(function(){
+    $.ajax({
+          url: '/username'
+    }).done(function (data) {
+      console.log("data loaded: " + data.username);
+      if(data.username)
+        initChat($('#container')[0], data.username);
+    });
+  });
+
+  // Set the session
+  $('#connect-btn').click(function(){
+    var data = JSON.stringify({username: $('#username-input').val()});
+    $.ajax({ url: '/username',
+              method: "POST",
+              data: data,
+              contentType: 'application/json',
+              dataType: 'json'
+            });
+  });
+
+  // Initalize the chat
   $('#connect-btn').click(function () {
     initChat($('#container')[0],
       $('#username-input').val());
@@ -17,7 +39,7 @@ $(function () {
   }
 
   window.onbeforeunload = function () {
-    return 'Are you sure you want to leave the chat?';
+  //  return 'Are you sure you want to leave the chat?';
   };
 
 });
