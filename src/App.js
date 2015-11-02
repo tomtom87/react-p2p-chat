@@ -3,6 +3,8 @@
 
 $(function () {
   'use strict';
+  debugger;
+
   $('#connect-btn').click(function () {
     initChat($('#container')[0],
       $('#username-input').val());
