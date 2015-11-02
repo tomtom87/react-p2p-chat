@@ -1,4 +1,6 @@
-# react-p2p-chat
+# react-p2p-chat (part 2)
+ 
+From tutorial contd.. Part 2 - Adding sessions and mongodb
 
 A React based webRTC chat using Socket.io and PeerJS for p2p messaging.
 
